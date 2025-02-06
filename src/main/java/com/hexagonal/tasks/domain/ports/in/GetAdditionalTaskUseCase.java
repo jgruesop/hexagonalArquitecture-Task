@@ -4,5 +4,5 @@ import com.hexagonal.tasks.domain.models.AdditionalTaskInfo;
 
 public interface GetAdditionalTaskUseCase {
 
-    AdditionalTaskInfo getAdditionaltaskInfo(Long id);
+    AdditionalTaskInfo getAdditionalTaskInfo(Long id);
 }
