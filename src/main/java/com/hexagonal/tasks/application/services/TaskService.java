@@ -13,10 +13,10 @@ public class TaskService implements CreateTaskUseCase, RetrieveTaskUseCase,
         UpdateTaskUseCase, GetAdditionalTaskUseCase, DeleteTaskUseCase {
 
     private final CreateTaskUseCase createTaskUseCase;
-    private final GetAdditionalTaskUseCase getAdditionalTaskUseCase;
-    private final DeleteTaskUseCase deleteTaskUseCase;
-    private final UpdateTaskUseCase updateTaskUseCase;
     private final RetrieveTaskUseCase retrieveTaskUseCase;
+    private final UpdateTaskUseCase updateTaskUseCase;
+    private final DeleteTaskUseCase deleteTaskUseCase;
+    private final GetAdditionalTaskUseCase getAdditionalTaskUseCase;
 
     @Override
     public Task createTask(Task task) {
@@ -29,8 +29,8 @@ public class TaskService implements CreateTaskUseCase, RetrieveTaskUseCase,
     }
 
     @Override
-    public AdditionalTaskInfo getAdditionaltaskInfo(Long id) {
-        return getAdditionalTaskUseCase.getAdditionaltaskInfo(id);
+    public AdditionalTaskInfo getAdditionalTaskInfo(Long id) {
+        return getAdditionalTaskUseCase.getAdditionalTaskInfo(id);
     }
 
     @Override
