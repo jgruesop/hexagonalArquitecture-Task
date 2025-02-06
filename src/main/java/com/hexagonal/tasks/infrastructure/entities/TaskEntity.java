@@ -27,8 +27,11 @@ public class TaskEntity {
     private LocalDateTime creationDate;
     private boolean completed;
 
-    public static TaskEntity domainModel(Task task) {
+    public static TaskEntity fromDomainModel(Task task) {
         return new TaskEntity(task.getId(), task.getTitle(), task.getDescription(), task.getCreationDate(), task.getCompleted());
     }
 
+    public Task toDomainModel() {
+        return new Task(id, title, description, creationDate, completed);
+    }
 }
